@@ -3,3 +3,5 @@ const quotes = [“The Best Way To Get Started Is To Quit Talking And Begin Doin
 const inspire = function (quotes) {
     console.log(quotes[Math.floor(Math.random()*quotes.length)])
 }
+
+inspire()
