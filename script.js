@@ -1,4 +1,4 @@
-let randomInd = require('./randomizer');
+const randomInd = require('./randomizer');
 
 const obj = {
     verb1: ['do', 'learn', 'travel', 'succeed', 'forgive'],
