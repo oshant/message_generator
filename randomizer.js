@@ -1,0 +1,1 @@
+module.exports = randomInd = num => Math.floor(Math.random() * num); 

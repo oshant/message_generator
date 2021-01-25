@@ -1,8 +1,21 @@
-const quotes = [ `"The Best Way To Get Started Is To Quit Talking And Begin Doing.”`,`“The Pessimist Sees Difficulty In Every Opportunity. The Optimist Sees Opportunity In Every Difficulty.”`, `“Don’t Let Yesterday Take Up Too Much Of Today.”`, `“You Learn More From Failure Than From Success. Don’t Let It Stop You. Failure Builds Character.”`, `“It’s Not Whether You Get Knocked Down, It’s Whether You Get Up.”`];
+let randomInd = require('./randomizer');
 
-const inspire = function (quotes) {
-    console.log(quotes[Math.floor(Math.random() * quotes.length)])
+const obj = {
+    verb1: ['do', 'learn', 'travel', 'succeed', 'forgive'],
+    verb2: ['forget', 'cheat', 'leave', 'agree', 'ignore'],
+    verb3: ['fighting', 'programming', 'working', 'traveling', 'building']
 }
 
+let array = [];
 
-inspire(quotes);
+for (let key in obj) {
+    let list = obj[key];
+    let verb = list[randomInd(list.length)];
+    array.push(verb);
+}
+
+const inspire = function () {
+    console.log(`"The Best Way To ${array[0]} Is To ${array[1]} And Begin ${array[2]}.”`)
+}
+
+inspire();
